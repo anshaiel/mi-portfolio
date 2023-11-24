@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500;600&family=Noto+Serif:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Enlace al nuevo archivo JavaScript -->
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo">
+                <a href="#">Ana Silva</a>
+            </div>
+            <ul class="menu-list">
+                <div class="icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="banner">
+        <div class="banner--content">
+            <h1 class="name">Silva Ana</h1>
+            <h3 class="designation tagline"></h3>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="h2">Sobre mi</h2>
+        <div class="content-a">
+            <p>¡Hola! Soy Ana Silva, una desarrolladora web principiante. He estado explorando diversos lenguajes de programación por mi cuenta 
+            y disfruto colaborar con otros. Aunque sé que tengo mucho por aprender, estoy comprometida a mejorar mis habilidades y crear software
+            funcional y fácil de usar. ¡Gracias por leer sobre mí, espero trabajar juntos!</p>
+        </div>
+    </section><!-- #about -->
+
+    <section id="skills">
+        <div class="skills--content">
+            <div class="left">
+                <h2>Habilidades</h2>
+                <p>He estado esforzándome por mejorar mis habilidades en programación y enfrentando desafíos con entusiasmo. Disfruto resolviendo problemas,
+                    dividiéndolos en partes más manejables. Mi compromiso con el aprendizaje continuo como principiante me impulsa a seguir creciendo y mejorando.
+                    Estos son algunos de los lenguajes que utilizo:</p>
+            </div>  
+            <div class="right">
+                <div class="item">
+                    <i class='bx bxl-javascript'></i>
+                    <h3>Javascript</h3>
+                </div>
+                <div class="item">
+                    <i class='bx bxl-python'></i>
+                    <h3>Python</h3>
+                </div>
+                <div class="item">
+                    <i class='bx bxl-css3'></i>
+                    <h3>Css</h3>
+                </div>
+                <div class="item">
+                    <i class='bx bxl-html5'></i>
+                    <h3>Html</h3>
+                </div>
+            </div>
+        </div>
+    </section><!-- #skills -->
+
+    <section id="portfolio">
+        <h2 class="center">Algunos de mis proyectos</h2>
+        <div class="portfolio--content">
+            <div class="item">
+                <a href="https://stupendous-pithivier-0cd8b8.netlify.app/" target="_blank">
+                    <h3>Calculator</h3>
+                    <img src="images\Screenshot 2023-11-22 231749.png" alt="calculator">
+                </a>
+            </div>
+            <div class="item">
+                <h3>Login form</h3>
+                <img src="images\WhatsApp Image 2023-11-23 at 22.17.17.jpeg" alt="login form">
+            </div>
+            <div class="item">
+                <h3>To do App</h3>
+                <img src="images\WhatsApp Image 2023-11-23 at 22.17.16.jpeg" alt="to do app">
+            </div>
+        </div>
+    </section><!-- portfolio -->
+
+    <section id="contact">
+        <div class="contact--content">
+            <p>Solo quería hacerte saber que siempre estoy disponible para una charla amistosa. Ya sea que desee discutir sus ideas, verificar la viabilidad de un proyecto o planificar un cronograma, no dude en comunicarse conmigo.
+            Puedes enviarme un correo electrónico <a href="mailto:anashaielsilva@gmail.com">AQUÍ</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <a href="https://github.com/anshaiel" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://codepen.io/anshaiel" target="_blank"><i class="fa-brands fa-codepen"></i></a>
+            <a href="https://www.linkedin.com/in/ana-silva-086972276/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <!-- Script adicional -->
+    <script src="script.js"></script>
+    <script>
+        const descriptions = [
+            "Frontend Developer",
+            "UX/UI Designer",
+            "Web Developer"
+        ];
+
+        const taglineElement = document.querySelector(".tagline");
+        let currentIndex = 0;
+
+        function updateTagline() {
+            taglineElement.textContent = descriptions[currentIndex];
+            currentIndex = (currentIndex + 1) % descriptions.length;
+        }
+
+        setInterval(updateTagline, 2000);
+
+        updateTagline();
+    </script>
+</body>
+</html>
